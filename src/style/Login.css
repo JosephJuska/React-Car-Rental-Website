@@ -1,0 +1,120 @@
+:root {
+    --text: #00A7E1;
+}
+
+.login {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('/src/assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.login section {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.register-text {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    color: #fff;
+}
+
+.register-text a {
+    color: var(--text);
+    transition: all .3s ease;
+}
+
+.register-text a:hover {
+    opacity: 0.7;
+}
+
+.login section form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.login section form p:first-child {
+    font-size: clamp(2rem, 1vw, 3rem);
+    color: #fff;
+    font-weight: 700;
+}
+
+.login section form div {
+    width: 60%;
+}
+
+.login section form div label {
+    display: block;
+    font-size: clamp(0.8rem, 2.5vw,1.25rem);
+    color: #fff;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.login section form div input {
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    color: var(--text);
+    border: 2px solid var(--text);;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all .3s ease;
+    font-weight: 700;
+    width: 100%;
+}
+
+.login section form button {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    border: 4px solid var(--text);
+    font-weight: 700;
+    color: var(--text);
+    padding: 0.25rem 2.5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.login section form button:hover {
+    background-color: var(--text);
+    color: #fff;
+}
+
+.login section form .forgot {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-weight: 700;
+    color: var(--text);
+    transition: all .3s ease;
+}
+
+.login section form .forgot:hover {
+    opacity: 0.7;
+}
+
+@media only screen and (max-width: 900px) {
+    .login section {
+        width: 90%;
+        height: 80%;
+    }
+
+    .login {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .login section form div {
+        width: 80%;
+    }
+}

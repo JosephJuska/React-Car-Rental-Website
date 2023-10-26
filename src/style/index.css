@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+a, li, button, input, select {
+    outline: none;
+    text-decoration: none;
+    background: none;
+    list-style: none;
+    border: none;
+}
+
+body {
+    background-color: #040303;
+    scroll-behavior: smooth;
+}

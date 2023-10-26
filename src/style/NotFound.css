@@ -1,0 +1,25 @@
+:root {
+    --text: #00A7E1;
+}
+
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+    width: 90%;
+    max-width: 1200px;
+    height: calc(100svh - 4.5rem);
+}
+
+.not-found p {
+    font-weight: 700;
+    color: var(--text);
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+    text-align: center;
+}
+
+.not-found p:nth-child(1) {
+    font-size: clamp(1.75rem, 4.5vw, 3.5rem);
+}

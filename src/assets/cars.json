@@ -1,0 +1,80 @@
+{
+    "cars": [
+      {
+        "id" : 1,
+        "brand": "ferrari",
+        "expense": 550,
+        "name": "McLaren Speedtail",
+        "img": "/src/assets/cars/ferrari-1.jpg"
+      },
+      {
+        "id" : 2,
+        "brand": "ferrari",
+        "expense": 450,
+        "name": "Mercedes AMG One",
+        "img": "/src/assets/cars/ferrari-2.jpeg"
+      },
+      {
+        "id" : 3,
+        "brand": "porche",
+        "expense": 400,
+        "name": "2018 Porsche 911 GT2RS",
+        "img": "/src/assets/cars/porche-3.jpg"
+      },
+      {
+        "id" : 4,
+        "brand": "porche",
+        "expense": 550,
+        "name": "Porsche 918 Spyder Weissach Package",
+        "img": "/src/assets/cars/porche-4.jpg"
+      },
+      {
+        "id" : 5,
+        "brand": "porche",
+        "expense": 4500,
+        "name": "1993 Porsche 964 Turbo S Leichtbau",
+        "img": "/src/assets/cars/porche-5.jpg"
+      },
+      {
+        "id" : 6,
+        "brand": "tesla",
+        "expense": 470,
+        "name": "Tesla Model X",
+        "img": "/src/assets/cars/tesla-6.jpg"
+      },
+      {
+        "id" : 7,
+        "brand": "tesla",
+        "expense": 350,
+        "name": "Tesla Model S",
+        "img": "/src/assets/cars/tesla-7.jpg"
+      },
+      {
+        "id" : 8,
+        "brand": "bentley",
+        "expense": 1000,
+        "name": "Bentley Continental GT V8",
+        "img": "/src/assets/cars/bentley-8.jpg"
+      },
+      {
+        "id" : 9,
+        "brand": "bentley",
+        "expense": 800,
+        "name": "Bentley Bentayga Speed W12",
+        "img": "/src/assets/cars/bentley-9.jpg"
+      },
+      {
+        "id" : 10,
+        "brand": "ferrari",
+        "expense": 650,
+        "name": "2024 Ferrari Daytona SP3",
+        "img": "/src/assets/cars/ferrari-10.jpg"
+      }
+    ],
+    "counts": {
+      "tesla": 2,
+      "ferrari": 3,
+      "bentley": 2,
+      "porcshe" : 3
+    }
+}

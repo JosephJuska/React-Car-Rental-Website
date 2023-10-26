@@ -1,0 +1,198 @@
+:root {
+    --text: #00A7E1;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: var(--text);
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 2px;
+}
+
+.car-container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: calc(100svh - 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.car-subcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.car-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-width: 500px;
+    filter: saturate();
+}
+
+.car-image img:nth-child(1) {
+    width: 100%;
+    height: auto;
+}
+
+.car-image img:nth-child(2) {
+    position: absolute;
+    width: 20%;
+    top: 10%;
+    right: 40px;
+}
+
+.car-bottom {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.car-bottom div p {
+    font-weight: 700;
+    color: #fff;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.car-bottom div p span {
+    color: var(--text);
+}
+
+.car-bottom button {
+    font-weight: 700;
+    color: var(--text);
+    border: 3px solid var(--text);
+    padding: 0.5rem 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 5px;
+}
+
+.car-bottom button:hover {
+    color: #fff;
+    background-color: var(--text);
+}
+
+.car-confirm {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.car-confirm.show-rent {
+    display: flex;
+}
+
+.car-confirm p {
+    font-weight: 700;
+    color: #fff;
+    font-size: clamp(1rem, 3vw, 2rem);
+    text-align: center;
+}
+
+.car-confirm p span {
+    color: var(--text);
+}
+
+.car-confirm div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.car-confirm div button {
+    font-weight: 700;
+    color: #fff;
+    font-size: clamp(1rem, 3vw, 1.75rem);
+    padding: 0.5rem 1rem;
+    border: 3px solid var(--text);
+    min-width: 8rem;
+    transition: all .3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.car-confirm div button:hover {
+    color: var(--text);
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.rent-button.rented {
+    background-color: #fff;
+    color: var(--text);
+    border-color: #fff;
+}
+
+.rent-button.rented:hover {
+    background-color: #fff;
+    color: var(--text);
+    border-color: #fff;
+}
+.no-id {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+.no-id p {
+    font-weight: 700;
+    color: var(--text);
+    font-size: clamp(2rem, 3vw, 3rem);
+    text-align: center;
+}
+
+.no-id p:nth-child(2) {
+    font-size: clamp(1.25rem, 2vw, 2rem)
+}
+
+@media only screen and (max-width: 676px) {
+    .car-bottom {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .car-image {
+        width: 100%;
+        min-width: 1px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .car-confirm div button {
+        padding: 0.25rem 0.5rem;
+        min-width: 6rem;
+    }
+
+    .car-confirm div {
+        gap: 3rem;
+    }
+}

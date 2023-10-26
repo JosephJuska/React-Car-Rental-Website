@@ -1,0 +1,105 @@
+:root {
+    --text: #00A7E1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+header div {
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #040303;
+    padding: 0.5rem 0;
+}
+
+header div nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header div nav ul li a {
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: var(--text);
+    transition: all .3s ease;
+}
+
+header div nav ul li a.active {
+    border-color: var(--text);
+}
+
+header div nav ul li a:hover {
+    opacity: 0.7;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--text);
+    transition: all .3s ease;
+}
+
+.menu:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    height: clamp(3rem, 10vw ,3.5rem);
+}
+
+.profile {
+    padding: 0.25rem;
+    border: 0.125rem solid var(--text);
+}
+
+@media only screen and (max-width: 1020px) {
+    header div nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header div nav ul li a {
+        font-size: 1.25rem;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    header div nav ul {
+        position: fixed;
+        top: 4.5rem;
+        left: -100%;
+        width: 50%;
+        height: calc(100svh);
+        flex-direction: column;
+        align-items: center;
+        padding: 20% 0;
+        background-color: #040303;
+        transition: all .7s ease
+    }
+
+    header div nav ul.open {
+        left: 0;
+    }
+
+    header div nav ul.open {
+        overflow: hidden;
+    }
+}

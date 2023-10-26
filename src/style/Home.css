@@ -1,0 +1,368 @@
+:root {
+    --text: #00A7E1;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 8px;
+    background-color: var(--text);
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 2px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100svh;
+}
+
+.hero {
+    min-height: calc(100svh - 4.5rem);
+    align-items: center;
+    justify-content: center;
+    gap: 0.25
+}
+
+.hero div {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero div .title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero div .subtitle {
+    font-size:clamp(1rem, 2.25vw, 1.25rem);
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero div a {
+    font-size: clamp(0.6rem, 1.25vw, 1.25rem);
+    font-weight: 700;
+    width: fit-content;
+    color: var(--text);
+    padding: 0.75rem 1.75rem;
+    border: 2px solid #fff;
+    transition: all .3s ease;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.hero div a:hover {
+    background-color: var(--text);
+    color: #fff;
+    border-color: var(--text);
+}
+
+.hero img {
+    width: 60%;
+    height: auto;
+    min-width: 35rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        padding: 4rem;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero div {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero img {
+        min-width: 25rem;
+    }
+
+    .hero div {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .hero img {
+        min-width: clamp(18rem, 20vw, 25rem);
+    }
+
+    .hero div a {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+.why {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.why p {
+    font-size: clamp(0.75rem, 2vw, 1.75rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 1.5rem;
+    z-index: 2;
+}
+
+.why p span {
+    color: var(--text);
+}
+
+.why p:nth-child(1) {
+    font-size: clamp(1.25rem, 3vw, 3rem);
+}
+
+.why .reason {
+    padding: 0.5rem 2rem;
+}
+
+.why .reason:nth-child(odd) {
+    text-align: right;
+    border-bottom: 4px solid var(--text);
+    border-right: 4px solid var(--text);
+}
+
+.why .reason:nth-child(even) {
+    text-align: left;
+    border-bottom: 4px solid var(--text);
+    border-left: 4px solid var(--text);
+}
+
+.why .sally-1 {
+    position: absolute;
+    width: 40rem;
+    top: 40px;
+    right: 70px;
+    opacity: 0.7;
+}
+
+.why .star-1 {
+    position: absolute;
+    width: 5rem;
+    top: 20px;
+    left: 30px;
+    opacity: 0.7;
+    animation: flicker 6s ease infinite;
+}
+
+.why .star-2 {
+    position: absolute;
+    width: 5rem;
+    bottom: 50px;
+    right: 45px;
+    opacity: 0.7;
+    animation: flicker 6s ease infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .why .sally-1 {
+        width: clamp(15rem, 60vw, 35rem);
+        top: 20%;
+        right: 10%;
+    }
+    
+    .why .star-1 {
+        top: 20%;
+        left: 10%;
+        width: clamp(3rem, 20vw, 4rem);
+    }
+    
+    .why .star-2 {
+        bottom: 20%;
+        right: 10%;
+        width: clamp(3rem, 20vw, 4rem);
+    }
+}
+
+.brands {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.brands p {
+    font-size: clamp(1rem, 4vw, 1.75rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 1.5rem;
+    z-index: 2;
+}
+
+.brands p span {
+    color: var(--text);
+}
+
+.brands p:nth-child(1) {
+    font-size: clamp(1.4rem, 5vw, 3rem);
+}
+
+.brands div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    width: 15%;
+    transition: all .3s ease;
+    min-width: 5rem;
+    filter:grayscale();
+}
+
+.brand:hover {
+    scale: 1.1;
+    filter:none;
+}
+
+.customers {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.customers .title {
+    font-size: clamp(1.4rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 1.5rem;
+    z-index: 2;
+}
+
+.testimonial-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+    margin: 2rem 0;
+    transition: background-size 1s ease;
+}
+
+.testimonial-card:nth-child(1) {
+    background-image: url('/src/assets/cars/bentley-8.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+}
+
+.testimonial-card:nth-child(2) {
+    background-image: url('/src/assets/cars/porche-3.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+}
+
+.testimonial-card:nth-child(3) {
+    background-image: url('/src/assets/cars/tesla-7.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+}
+
+.testimonial-card:hover {
+    background-size: 110%;
+}
+
+.testimonial-card p {
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    font-weight: 700;
+    color: #fff;
+    z-index: 2;
+}
+
+.testimonial-card .tbrand {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 4rem;
+    height: auto;
+    transition: all .3s ease;
+}
+
+.testimonial-card .tbrand:hover {
+    transform: scale(1.2);
+}
+
+.testimonial-card div {
+    width: 60%;
+    min-height: 100%;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+.testimonial-card div p span {
+    color: var(--text);
+}
+
+.testimonial-card div .customer {
+    font-size: clamp(0.5rem, 2vw, 1.25rem);
+}
+
+.testimonial-card div .testimonial {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+    .testimonial-card div {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .testimonial-card div {
+        gap: 1rem;
+        padding: 0.75rem 1.75rem;
+    }
+}
